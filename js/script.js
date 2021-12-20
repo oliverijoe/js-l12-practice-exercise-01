@@ -13,13 +13,13 @@ getData();
 
 const displayUsers = function (userResults) {
     randomFolks.innerHTML = "";
-    for (let user of userResult) {
+    for (let user of userResults) {
         const country = user.location.country;
         const name = user.name.first;
         const imageUrl = user.picture.medium;
-    const userDiv = document.createElement();
+    const userDiv = document.createElement("div");
     userDiv.innerHTML = `
-        <h3>${this.name}<h3><p>${this.country}</p><img src=${this.imageUrl} alt="User avatar" />
+        <h3>${name}<h3><p>${country}</p><img src=${imageUrl} alt="User avatar" />
     `;
     randomFolks.append(userDiv);
     }
